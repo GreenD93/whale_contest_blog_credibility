@@ -33,6 +33,7 @@ __모델 구성__<br>
 
 18개 분야(맛집, 국내여행, 뷰티 등)의 16,304개 블로그를 이용하여 학습된 딥러닝 모델(MLP - 4 hidden layer)이 사용되었으며[2], 모델 결과에 대한 설명력을 높이기 위해
 K-means 군집화 방법을 추가하였습니다.[3] <br>
+아래는 모델에 사용된 31개 feature 입니다.[4-17]
 <br>
 ![Alt text](./image/All_type_of_features.png "All type of features")
 
@@ -45,3 +46,14 @@ K-means 군집화 방법을 추가하였습니다.[3] <br>
 *	[1] Fogg, B. J., & Tseng, H.(1999). The elements of computer credibility. _In Proceddings of the SIGCHI conference on Human Factors in Computing Systems_(pp.80-87). ACM
 *	[2] How Do Humans Assess the Credibility of Weblogs: Qualifying and Verifying Human Factors with Machine Learning _SIGCHI_ (under review).
 *	[3] 기계학습 기반 블로그 신뢰도 시각화 웹 어플리케이션 개발: Visualization Web Application Development Based on Machine learning for Credibility of Weblogs _KHCI_ (under review).
+*	[4] Mukherjee, A., Venkataraman, V., Liu, B., & Glance, N. S. (2013, July). What yelp fake review filter might be doing?. In ICWSM (pp. 409-418).
+*	[5] Benevenuto, F., Magno, G., Rodrigues, T., & Almeida, V. (2010, July). Detecting spammers on twitter. In Collaboration, electronic messaging, anti-abuse and spam conference (CEAS) (Vol. 6, No. 2010, p. 12).
+*	[6] Castillo, C., Mendoza, M., & Poblete, B. (2011, March). Information credibility on twitter. In Proceedings of the 20th international conference on World wide web (pp. 675-684). ACM.
+*	[7] Ferrara, E., Varol, O., Davis, C., Menczer, F., & Flammini, A. (2016). The rise of social bots. Communications of the ACM, 59(7), 96-104.
+*	[8] Han, K. (2018). How do you perceive this author? Understanding and modeling authors’ communication quality in social media. PloS one, 13(2), e0192061.
+*	[9] Lee, K., Caverlee, J., & Webb, S. (2010, July). Uncovering social spammers: social honeypots+ machine learning. In Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval (pp. 435-442). ACM. 
+*	[10] Li, F., Huang, M., Yang, Y., & Zhu, X. (2011, July). Learning to identify review spam. In IJCAI Proceedings-International Joint Conference on Artificial Intelligence (Vol. 22, No. 3, p. 2488).
+*	[11] Lu, Y., Zhang, L., Xiao, Y., & Li, Y. (2013, May). Simultaneously detecting fake reviews and review spammers using factor graph model. In Proceedings of the 5th annual ACM web science conference (pp. 225-233). ACM.
+*	[12] Stringhini, G., Kruegel, C., & Vigna, G. (2010, December). Detecting spammers on social networks. In Proceedings of the 26th annual computer security applications conference (pp. 1-9). ACM.
+*	[13] 소현진. (2013). 신뢰받는 블로그 콘텐츠의 특성 탐구: 파워블로그의 사용후기분석과 소비자 조사를 통하여. 한국콘텐츠학회논문지, 13(1), 73-82.
+*	[14] 장재영, 이병준, 조세진, 한다혜, & 이규홍. (2016). 기계학습기법을 이용한 광고 외식 블로그의 자동분류. 한국인터넷방송통신학회 논문지, 16(2), 55-62.
