@@ -32,8 +32,7 @@ __신뢰성의 정의__<br><br>
 __모델 구성__<br>
 
 18개 분야(맛집, 국내여행, 뷰티 등)의 16,304개 블로그를 이용하여 학습된 딥러닝 모델(MLP - 4 hidden layer)이 사용되었으며[2], 모델 결과에 대한 설명력을 높이기 위해
-K-means 군집화 방법을 추가하였습니다.[3] <br>
-아래는 모델에 사용된 31개 feature 입니다.[4-17]
+K-means 군집화 방법을 추가하였습니다.[3] 아래는 모델에 사용된 31개 feature 입니다.[4-17]
 <br>
 ![Alt text](./image/All_type_of_features.png "All type of features")
 
