@@ -18,8 +18,8 @@ K-means 군집화 방법을 추가하였습니다.[2]
 * __전승곤__ [아주대학교 컴퓨터공학과  _vskylife5901@ajou.ac.kr_] 
 * __한재호__ [아주대학교 미디어학과  _woghrnt2@ajou.ac.kr_]
 
-*	Adviser 
-    *	__한경식__ [아주대학교 컴퓨터공학과/데이터사이언스학과 _ kyungsikhan@ajou.ac.kr_]
+*	__Adviser__ 
+    *	__한경식__ [아주대학교 컴퓨터공학과/데이터사이언스학과 _kyungsikhan@ajou.ac.kr_]
 
 
 ## 관련 논문
