@@ -1,4 +1,4 @@
-![Alt text](./Img/Icon.png "Icon")
+![Alt text](./image/Icon.png "Icon")
 # 사다리 v1.0
 ## 사다리 소개
 네이버 웨일 확장앱 콘테스트 본선 진출작으로, 네이버 블로그에 대한 신뢰성 판단을 지원하는 어플리케이션입니다.
@@ -20,7 +20,7 @@ __주요 기능__<br>
  * 1.일반 유저인지, 2.블로그 체험단을 통하여 작성된 글인지, 3.원고만 받고 쓴 글인지에 대한 정보도 제공합니다. 
 
 ## 블로그 분류 7가지 타입
-![Alt text](./Img/All_type_chart_24.png "Visualization chart of 7 type Blog cluster")
+![Alt text](./image/All_type_chart_24.png "Visualization chart of 7 type Blog cluster")
 
 
 ## 팀 구성원
