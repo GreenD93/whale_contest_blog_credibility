@@ -36,7 +36,7 @@ K-means 군집화 방법을 추가하였습니다.[3] <br>
 <br>
 ![Alt text](./image/All_type_of_features.png "All type of features")
 
-## 블로그 분류 7가지 타입
+## 블로그 분류 6가지 타입
 <br><br>
 ![Alt text](./image/All_type_chart_24.png "Visualization chart of 7 type Blog cluster")
 
