@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<HTML>
+<!-- this site is created with: http://www.iueditor.org -->
+<!--<link rel="stylesheet" type="text/css" href="/resource/css/pages/boostrap3.3.0.min.css" id="bootstrap-css">-->
+<!--<script type="text/javascript" src="/resource/js/bootstrap3.3.0.min.js"></script>-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/resource/common/iu.css">
+    <link rel="stylesheet" type="text/css" href="/resource/css/pages/index.css">
+    <link rel="stylesheet" type="text/css" href="/resource/css/pages/sentiment_word.css">
+    <link rel="stylesheet" type="text/css" href="/resource/css/pages/hint.css">
+
+	<script type="text/javascript" src="/resource/js/iu_editor.js"></script>
+    <script type="text/javascript" src="/resource/js/popper.min.js"></script>
+    <script type="text/javascript" src="/resource/js/index.js"></script>
+    <script type="text/javascript" src="/resource/js/script.js"></script>
+	<!--<script src="https://d3js.org/d3.v5.min.js"></script>-->
+    <script type="text/javascript" src="/resource/js/d3/d3.js"></script>
+    <!--<script type="text/javascript" src="/resource/js/d3.v3.min.js"></script>-->
+    <script type='text/javascript' src='resource/js/jquery-3.1.1.min.js'></script>
+    <script type="text/javascript" src="/resource/js/pieBarChart.js"></script>
+    <script type="text/javascript" src="/resource/js/Radarscript.js"></script>
+    <script type="text/javascript" src="/resource/js/RadarChart.js"></script>
+	<script type='text/javascript' src='/resource/js/Sentiment_word.js'></script>
+    <!--[if lt IE 9]>
+      <script>
+        document.createElement("header" );
+        document.createElement("footer" );
+        document.createElement("section");
+        document.createElement("nav"    );
+        document.createElement("article");
+      </script>
+      <noscript>
+        <strong>Warning !</strong>
+        Because your browser does not support HTML5, some elements are simulated using JScript.
+        Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+      </noscript>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="loading" >
+      <img id="loading-image" src="/resource/project/loading.gif" alt="Loading..." />
+      <p id='checking_text'><strong>Checking....</strong></p>
+	</div>
+	  
+    <div class="iu-page index">
+      <header class="iu-header header">
+        <div class="iu-center-box center-box-3">
+          <div class="iu-floating-image floating-image-14"></div>
+          <div class="iu-text text-15">
+            <p>사다리</p>
+          </div>
+        </div>
+      </header>
+      <section class="iu-page-content page-content">
+        <section class="iu-section section">
+          <div class="iu-center-box center-box-12">
+            <div class="iu-box box-18">
+              <div class="iu-box box-49">
+                <div id="credibility-text" class="iu-text text-51">
+                  <p>좋음</p>
+                </div>
+                <div class="iu-text text-50">
+                  <p>이 블로그의 신뢰도</p>
+                </div>
+              </div>
+              <div id="credibility-sent" class="iu-text text-17">
+                <p>경험을 가진 블로거가 작성한 포스팅입니다&nbsp;</p>
+              </div>
+              <div class="iu-box box-24">
+                <div class="iu-floating-image floating-image"></div>
+              </div>
+              <div class="iu-box box"></div>
+              <div id="credibility-num" class="iu-text text-47">
+                <p>신뢰성 확률 : 99.7%</p>
+              </div>
+              <div class="iu-box box-31"></div>
+            </div>
+            <div class="iu-box box-30">
+              <div class="iu-box box-58">
+                <div id="details" class="iu-text text-59">
+                  <p><span style="color: #339966;">O-1번 군집</span>&nbsp;집단에 선정된 블로그들은 <span style="color: #339966;">1인칭, 2인칭 대명사의 빈도가 높고, 블로그의 글 구조가 자유롭고 다양한</span>&nbsp;특징을 가지고&nbsp;있습니다. 현재 블로그의 특징과 <span style="color: #339966;">부분 일치</span>하는 것으로 확인됩니다.</p>
+                </div>
+                <div class="iu-text text-60">
+                  <p>해당 글과 유사한 글들의 특징</p>
+                </div>
+                <div class="iu-box box-62"></div>
+              </div>
+              <div class="iu-box box-25">
+                <!--이미지와 hover table 위치 조정-->
+                <img src="/resource/project/info.PNG" width = "28" height= "26" id = "info_sentiment" class="test_info" style = "position: relative; left: 490px; top: 20px;">
+                <table id="table" style = "position: relative; top: 10px; margin: 10px 0 0 205px">
+                  <thead>
+                    <tr>
+                    <tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>&nbsp 차트에 마우스를 올리면 간단한 설명이 나옵니다. &nbsp<br/>
+                          &nbsp 자세한 설명은 하단의 github 주소를 참조해주세요. &nbsp</td>
+                    </tr>
+                  </tbody>
+                  <!--<tbody>-->
+                  <!--<thead>-->
+                  <!--<tr>-->
+                  <!--<th>Addition Authorization Rules</th>-->
+                  <!--<tr>-->
+                  <!--</thead>-->
+                </table>
+                <div class="iu-text text-26">
+                  <p>감정 단어 분석</p>
+                </div>
+                <div class="iu-box box-27"></div>
+                <div class="iu-box box-29">
+				<img id='senti_check' src='/resource/project/no_senti.png'></img>
+                  <!--감정 단어 분석 파이 차트-->
+				  <svg id = senti_pie width= "100%" height = "100%"></svg>
+                  <!--<div id="chart"></div>-->
+                  <div id="mainTooltip" class="hidden">
+                    <p><span id="value"></span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="iu-box box-32">
+
+
+                <!--이미지와 hover table 위치 조정-->
+                <img src="/resource/project/info.PNG" width = "28" height= "26" id = "info" class="test_info" style = "position: relative; left: 490px; top: 20px;">
+                <table id="table" style = "position: relative; top: 10px; margin: 10px 0 0 205px">
+                  <thead>
+                    <tr>
+                    <tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>&nbsp 특징에 마우스를 올리면 간단한 설명이 나옵니다. &nbsp<br/>
+                          &nbsp 자세한 설명은 하단의 github 주소를 참조해주세요. &nbsp</td>
+                    </tr>
+                  </tbody>
+                  <!--<tbody>-->
+                  <!--<thead>-->
+                  <!--<tr>-->
+                  <!--<th>Addition Authorization Rules</th>-->
+                  <!--<tr>-->
+                  <!--</thead>-->
+                </table>
+                <div class="iu-text text-33">
+                  <p>신뢰도 속성 시각화</p>
+                </div>
+                <div class="iu-box box-33"></div>
+                <div class="iu-tabview tabview" data-iu-show-animation="transition.slideDownIn">
+                  <div class="iu-tab-header tab-header">
+                    <div class="iu-tab-header-item tab-header-item">
+                      <div class="iu-tab-header-default-item tab-header-default-item">
+                        <div class="iu-cell cell-47">
+                          <p>전체</p>
+                        </div>
+                      </div>
+                      <div class="iu-tab-header-active-item tab-header-active-item-49">
+                        <div class="iu-cell cell-51">
+                          <p>전체</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="iu-tab-header-item tab-header-item-39">
+                      <div class="iu-tab-header-default-item tab-header-default-item-43">
+                        <div class="iu-cell cell">
+                          <p>글의 구조</p>
+                        </div>
+                      </div>
+                      <div class="iu-tab-header-active-item tab-header-active-item">
+                        <div class="iu-cell cell-50">
+                          <p>글의 구조</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="iu-tab-header-item tab-header-item-52">
+                      <div class="iu-tab-header-default-item tab-header-default-item-53">
+                        <div class="iu-cell cell-55">
+                          <p>글의 감정</p>
+                        </div>
+                      </div>
+                      <div class="iu-tab-header-active-item tab-header-active-item-54">
+                        <div class="iu-cell cell-56">
+                          <p>글의 감정</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="iu-tab-header-item tab-header-item-59">
+                      <div class="iu-tab-header-default-item tab-header-default-item-60">
+                        <div class="iu-cell cell-62">
+                          <p>기타 정보</p>
+                        </div>
+                      </div>
+                      <div class="iu-tab-header-active-item tab-header-active-item-61">
+                        <div class="iu-cell cell-63">
+                          <p>기타 정보</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iu-tab-content tab-content">
+                    <div class="iu-tab-content-item tab-content-item-41">
+                      <div class="iu-box box-103">
+                        <div class="iu-box box-104">
+                          <div class="iu-text text-91">
+                            <p>블로그</p>
+                          </div>
+                        </div>
+                        <div class="iu-box box-105">
+						  <!--전체 pieBar 왼쪽-->
+						  <svg id = total_left width= "100%" height = "100%" style = "margin-top: 5px;"></svg>
+						  <div id="tooltip_left" class="hidden">
+						    <p><span id = "text_total_left">Feature name</span></p>
+						  </div>
+						</div>
+                      </div>
+                      <div class="iu-box box-106">
+                        <div class="iu-box box-107">
+                          <div class="iu-text text-92">
+                            <p>O-1 군집</p>
+                          </div>
+                        </div>
+                        <div class="iu-box box-108">
+                          <!--전체 pieBar 오른쪽 그래프-->
+                          <svg id = total_right width= "100%" height = "100%" style = "margin-top: 5px;"></svg>
+                          <div id="tooltip_right" class="hidden">
+                            <p><span id = "text_total_right">Feature name</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="iu-tab-content-item tab-content-item">
+                      <div class="iu-box box-69">
+                        <div class="iu-box box-70">
+                          <div class="iu-text text-72">
+                            <p>블로그</p>
+                          </div>
+                        </div>
+                        <div class="iu-box box-71">
+                          <!--글의 구조 radarChart 왼쪽 그래프-->
+                          <svg id = structure_left width= "100%" height = "100%"></svg>
+                          <div id="tooltip_structure_left" class="hidden">
+                          <p><span id = "text_structure_left">Feature name</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="iu-box box-73">
+                        <div class="iu-box box-74">
+                          <div class="iu-text text-76">
+                            <p>O-1 군집</p>
+                          </div>
+                        </div>
+                        <div class="iu-box box-75">
+                          <!--글의 구조 radarChart 오른쪽 그래프-->
+                          <svg id = structure_right width= "100%" height = "100%"></svg>
+                          <div id="tooltip_structure_right" class="hidden">
+                            <p><span id = "text_structure_right">Feature name</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="iu-tab-content-item tab-content-item-57">
+                      <div class="iu-box box-77">
+                        <div class="iu-box box-78">
+                          <div class="iu-text text-80">
+                            <p>블로그</p>
+                          </div>
+                        </div>
+                        <div class="iu-box box-79">
+                          <!--글의 감정 radarChart 왼쪽 그래프-->
+                          <svg id = sentiment_left width= "100%" height = "100%"></svg>
+                          <div id="tooltip_sentiment_left" class="hidden">
+                            <p><span id = "text_sentiment_left">Feature name</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="iu-box box-81">
+                        <div class="iu-box box-82">
+                          <div class="iu-text text-84">
+                            <p>O-1 군집</p>
+                          </div>
+                        </div>
+                        <div class="iu-box box-83">
+                          <!--글의 감정 radarChart 오른쪽 그래프-->
+                          <svg id = sentiment_right width= "100%" height = "100%"></svg>
+                          <div id="tooltip_sentiment_right" class="hidden">
+                            <p><span id = "text_sentiment_right">Feature name</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="iu-tab-content-item tab-content-item-64">
+                      <div class="iu-box box-85">
+                        <div class="iu-box box-86">
+                          <div class="iu-text text-88">
+                            <p>블로그</p>
+                          </div>
+                        </div>
+                        <div class="iu-box box-87">
+                          <!--기타 정보 radarChart 왼쪽 그래프-->
+                          <svg id = others_left width= "100%" height = "100%"></svg>
+                        </div>
+                      </div>
+                      <div class="iu-box box-89">
+                        <div class="iu-box box-90">
+                          <div class="iu-text text-93">
+                            <p>O-1 군집</p>
+                          </div>
+                        </div>
+                        <div class="iu-box box-91">
+                          <!--기타 정보 radarChart 오른쪽 그래프-->
+                          <svg id = others_right width= "100%" height = "100%"></svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <footer class="iu-footer footer">
+        <div class="iu-center-box center-box">
+          <div class="iu-box box-93"></div>
+          <div class="iu-text text-94">
+            <p>&copy; 2018 사다리</p>
+          </div>
+          <div class="iu-text text-95">
+            <p>&copy; 2018 사다리</p>
+          </div>
+          <div class="iu-text text-96">
+            <p>https://github.com/GreenD93/whale_contest_blog_credibility</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+  </body>
+</HTML>
