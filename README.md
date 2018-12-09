@@ -43,7 +43,7 @@ K-means 군집화 방법을 추가하였습니다[3]. 아래는 모델에 사용
 <br><br>
 ![Alt text](./image/All_type_chart_24.png "Visualization chart of 7 type Blog cluster")
 
-## 관련 논문
+## 참고 문헌
 
 *	[1] Fogg, B. J., & Tseng, H.(1999). The elements of computer credibility. _In Proceddings of the SIGCHI conference on Human Factors in Computing Systems_(pp.80-87). ACM
 *	[2] How Do Humans Assess the Credibility of Weblogs: Qualifying and Verifying Human Factors with Machine Learning _SIGCHI_ (under review).
