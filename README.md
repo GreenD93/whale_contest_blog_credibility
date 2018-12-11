@@ -46,7 +46,7 @@ K-means 군집화 방법을 추가하였습니다[3]. 아래는 모델에 사용
 ## 참고 문헌
 
 *	[1] Fogg, B. J., & Tseng, H.(1999). The elements of computer credibility. _In Proceddings of the SIGCHI conference on Human Factors in Computing Systems_(pp.80-87). ACM
-*	[2] How Do Humans Assess the Credibility of Weblogs: Qualifying and Verifying Human Factors with Machine Learning _SIGCHI_ (under review).
+*	[2] How Do Humans Assess the Credibility of Weblogs: Qualifying and Verifying Human Factors with Machine Learning _SIGCHI_ (conditionally accepted).
 *	[3] 기계학습 기반 블로그 신뢰도 시각화 웹 어플리케이션 개발: Visualization Web Application Development Based on Machine learning for Credibility of Weblogs _KHCI_ (under review).
 *	[4] Mukherjee, A., Venkataraman, V., Liu, B., & Glance, N. S. (2013, July). What yelp fake review filter might be doing?. In ICWSM (pp. 409-418).
 *	[5] Benevenuto, F., Magno, G., Rodrigues, T., & Almeida, V. (2010, July). Detecting spammers on twitter. In Collaboration, electronic messaging, anti-abuse and spam conference (CEAS) (Vol. 6, No. 2010, p. 12).
