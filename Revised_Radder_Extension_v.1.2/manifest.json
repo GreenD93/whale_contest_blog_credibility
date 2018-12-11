@@ -1,0 +1,40 @@
+{
+	"manifest_version": 2,
+	"name": "사다리",
+	"description": "내가 만드는 깨끗한 블로그 환경, 블로그 신뢰성 판단 지원 확장프로그램",
+	"version": "1.2",
+
+	"sidebar_action": {
+		"default_icon": "icon.png",
+		"default_page": "index.html",
+		"defalut_title" : "사이드앱",
+		"use_navigation_bar" : true
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"permissions": [
+		"<all_urls>",
+		"127.0.0.1:8000/*",
+		"54.180.25.83/*",
+		"54.180.103.78",
+		"tabs",
+		"alarms",
+		"storage"
+	],
+	"web_accessible_resources": [
+		"*.png"
+	],
+	"background":{
+		"scripts": ["background.js", "jquery-3.3.1.js"]
+	},
+	"content_scripts":[
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"css": ["notify.css"],
+			"js": ["jquery-3.3.1.js", "jquery.notify.js"],
+			"run_at": "document_end"
+		}
+	]
+}
