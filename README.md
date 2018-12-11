@@ -1,5 +1,5 @@
 ![Alt text](./image/icon.png "Icon")
-# 사다리 v1.0
+# 사다리 v1.2
 ![Alt text](./image/Overview_1.png "Overview")
 ## 사다리 소개
 네이버 웨일 확장앱 콘테스트 본선 진출작으로, 네이버 블로그에 대한 신뢰성 판단을 지원하는 어플리케이션입니다.
